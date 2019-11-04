@@ -1,0 +1,32 @@
+﻿@model Patient
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-md-12" style="text-align:center">
+        <img src="~/images/hospital.png" alt="" style="width:30%" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="text-align:center">
+        <h3>Welcome to Patient Registration System!</h3>
+        <hr />
+        <div class="row" style="text-align:center">
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary" asp-action="Index" 
+                   style="width:100%">Home</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary" asp-action="Register" 
+                   style="width:100%">Register Here</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary" asp-action="List" 
+                   style="width:100%">List of Patients</a>
+            </div>
+        </div>
+    </div>
+</div>

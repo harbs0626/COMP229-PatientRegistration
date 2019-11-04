@@ -1,0 +1,27 @@
+﻿@model Patient
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="row" style="margin-top:30px;text-align:center">
+    <div class="col-md-12">
+        <h1>Patient <b style="color:dodgerblue">@Model.PatientName</b>&nbsp;has been successfully registered&nbsp;
+            as @Model.Occupation on <b style="color:dodgerblue">@Model.CurrentDateAndTime</b></h1>
+        <hr />
+        <div class="row" style="text-align:center">
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary" asp-action="Index"
+                   style="width:100%">Home</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary" asp-action="Register"
+                   style="width:100%">Register Here</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary" asp-action="List"
+                   style="width:100%">List of Patients</a>
+            </div>
+        </div>
+    </div>
+</div>

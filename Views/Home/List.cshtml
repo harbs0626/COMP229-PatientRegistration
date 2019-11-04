@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Patient>
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="row" style="margin-top:30px;text-align:center">
+    <div class="col-md-12">
+        <h3>@ViewBag.Title</h3>
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>Patient Name</td>
+                            <td>Age</td>
+                            <td>Address</td>
+                            <td>Occupation</td>
+                            <td>Has Insurance</td>
+                            <td>Had Previous Operation</td>
+                            <td>Marital Status</td>
+                            <td>Date Registered</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Patient p in Model)
+                        {
+                            <tr>
+                                <td>@p.PatientName</td>
+                                <td>@p.Age</td>
+                                <td>@p.Address</td>
+                                <td>@p.Occupation</td>
+                                <td>@p.HasInsurance</td>
+                                <td>@p.HadPreviousOperation</td>
+                                <td>@p.MaritalStatus</td>
+                                <td>@p.CurrentDateAndTime</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row" style="text-align:center">
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary" asp-action="Index"
+                    style="width:100%">Home</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary" asp-action="Register"
+                    style="width:100%">Register Here</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary" asp-action="List"
+                    style="width:100%">List of Patients</a>
+            </div>
+        </div>
+    </div>
+</div>

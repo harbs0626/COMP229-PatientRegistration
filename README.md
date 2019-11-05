@@ -1,2 +1,2 @@
 # PatientRegistration
-Self-Study_Practice
+Self-study and practice for midterms from COMP229
